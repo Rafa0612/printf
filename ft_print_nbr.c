@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_formats.c                                       :+:      :+:    :+:   */
+/*   ft_print_nbr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rpena-ro <rpena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/11 12:23:17 by rpena-ro          #+#    #+#             */
-/*   Updated: 2025/12/11 14:02:40 by rpena-ro         ###   ########.fr       */
+/*   Created: 2025/12/11 13:39:41 by rpena-ro          #+#    #+#             */
+/*   Updated: 2025/12/11 14:00:10 by rpena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_formats(va_list args, const char format)
+int	ft_print_nbr(int a)
 {
-	int	len;
+	int	cont;
 
-	len = 0;
-	if (format == 'c')
-		len = len + ft_print_char(va_arg(args, int));
-	if (format == 's')
-		len = len + ft_print_str(va_arg(args, char *));
-	if (format == 'd' || format == 'i')
-		len = len + ft_print_nbr((va_arg(args,int)));
-	return (len);
+	cont = 0;
+	if (a == INT_MIN)
+	{
+		write(1, "-2147483648", 11);
+		return (11);
+	}
+	if (a < 0)
+	{
+		write(1, "-", 1);
+		cont++;
+		a = -a;
+	}
+	if (a > 9)
+		cont = cont + ft_print_nbr(a / 10);
+	cont = cont + ft_print_char(a % 10 + '0');
+	return (cont);
 }
