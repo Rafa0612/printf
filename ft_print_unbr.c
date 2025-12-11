@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_print_unbr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rpena-ro <rpena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/04 12:58:24 by rpena-ro          #+#    #+#             */
-/*   Updated: 2025/12/11 16:49:55 by rpena-ro         ###   ########.fr       */
+/*   Created: 2025/12/11 15:59:54 by rpena-ro          #+#    #+#             */
+/*   Updated: 2025/12/11 16:18:44 by rpena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include "Libft_Casa/libft.h"
-# include <stdarg.h>
+int	ft_print_unbr(unsigned int a)
+{
+	int	cont;
 
-int	ft_printf(char const *format, ...);
-int	ft_formats(va_list args, const char format);
-int	ft_print_char(int c);
-int	ft_print_str(const char *s);
-int	ft_print_nbr(int a);
-int	ft_print_unbr(unsigned int a);
-int	ft_print_perc(int a);
-
-#endif
+	cont = 0;
+	if (a > 9)
+		cont = cont + ft_print_unbr(a / 10);
+	cont = cont + ft_print_char(a % 10 + '0');
+	return (cont);
+}

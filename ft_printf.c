@@ -6,7 +6,7 @@
 /*   By: rpena-ro <rpena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/04 12:19:08 by rpena-ro          #+#    #+#             */
-/*   Updated: 2025/12/11 14:11:34 by rpena-ro         ###   ########.fr       */
+/*   Updated: 2025/12/11 16:43:51 by rpena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,12 @@ int	ft_printf(char const *s, ...)
 	return (len);
 }
 
-/*int main()
+int main()
 {
 	int print;
 	int printft;
 	int nmbr = -325;
+	int nmbr2 = 42;
 	char *s = "Mundo";
 	void *st;
 
@@ -55,5 +56,15 @@ int	ft_printf(char const *s, ...)
 	printft = ft_printf("El numero a mostrar es: %i \n", nmbr);
 	print = printf("El numero a mostrar es: %i \n", nmbr);
 	printf("Resultado original cadena: %d || Resultado ft cadena: %d \n", print, printft);
+	printf ("------------------Prueba Unsigned---------------------------\n");
+	print = printf("(-325) != %u \n", nmbr);
+	printft = ft_printf("(-325) != %u \n", nmbr);
+	printf("Resultado original cadena: %d || Resultado ft cadena: %d \n", print, printft);
+	print = printf("(42) == %u \n", nmbr2);
+	printft = ft_printf("(42) == %u \n", nmbr2);
+	printf("Resultado original cadena: %d || Resultado ft cadena: %d \n", print, printft);
+	printf("%x \n", 15);
+	printf("%% \n");
+	ft_printf("%% \n");
 	return 0;
-}*/
+}
