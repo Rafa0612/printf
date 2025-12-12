@@ -6,7 +6,7 @@
 /*   By: rpena-ro <rpena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 12:23:17 by rpena-ro          #+#    #+#             */
-/*   Updated: 2025/12/11 16:49:49 by rpena-ro         ###   ########.fr       */
+/*   Updated: 2025/12/12 13:31:04 by rpena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,10 @@ int	ft_formats(va_list args, const char format)
 	if (format == 'u')
 		len = len + ft_print_unbr(va_arg(args, int));
 	if (format == '%')
-		len = len + ft_print_perc(va_arg(args, int));
+		len = len + ft_print_perc();
+	if (format == 'x' || format == 'X')
+		len = len + ft_print_hex(va_arg(args, long), format);
+	if (format == 'p')
+		len = len + ft_print_ptr(va_arg(args, long));
 	return (len);
 }

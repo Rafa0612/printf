@@ -6,7 +6,7 @@
 /*   By: rpena-ro <rpena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/04 12:19:08 by rpena-ro          #+#    #+#             */
-/*   Updated: 2025/12/11 16:43:51 by rpena-ro         ###   ########.fr       */
+/*   Updated: 2025/12/12 15:14:50 by rpena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	ft_printf(char const *s, ...)
 	return (len);
 }
 
-int main()
+/*int main()
 {
 	int print;
 	int printft;
@@ -63,8 +63,16 @@ int main()
 	print = printf("(42) == %u \n", nmbr2);
 	printft = ft_printf("(42) == %u \n", nmbr2);
 	printf("Resultado original cadena: %d || Resultado ft cadena: %d \n", print, printft);
-	printf("%x \n", 15);
-	printf("%% \n");
-	ft_printf("%% \n");
+	printf ("------------------Prueba Porcentaje---------------------------\n");
+	printft = ft_printf("Resultado a mostrar : %% \n");
+	print = printf("Resultado a mostrar : %% \n");
+	printf("Resultado original cadena: %d || Resultado ft cadena: %d \n", print, printft);
+	printf ("------------------Prueba Hexadecimal---------------------------\n");
+	printft = ft_printf("(455X) : %X \n", 455);
+	print = printf("(455X) : %X \n", 455);
+	printf("Resultado original cadena: %d || Resultado ft cadena: %d \n", print, printft);
+	printft = ft_printf("(-15x) : %x \n", -15);
+	print = printf("(-15x) : %x \n", -15);
+	printf("Resultado original cadena: %d || Resultado ft cadena: %d \n", print, printft);
 	return 0;
-}
+}*/
