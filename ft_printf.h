@@ -6,14 +6,14 @@
 /*   By: rpena-ro <rpena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/04 12:58:24 by rpena-ro          #+#    #+#             */
-/*   Updated: 2025/12/15 15:43:26 by rpena-ro         ###   ########.fr       */
+/*   Updated: 2025/12/15 15:49:51 by rpena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include "Libft_Casa/libft.h"
+# include "libft/libft.h"
 # include <stdarg.h>
 
 int	ft_printf(char const *format, ...);

@@ -6,7 +6,7 @@
 /*   By: rpena-ro <rpena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/04 12:19:08 by rpena-ro          #+#    #+#             */
-/*   Updated: 2025/12/15 14:32:24 by rpena-ro         ###   ########.fr       */
+/*   Updated: 2025/12/15 15:50:30 by rpena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	ft_printf(char const *s, ...)
 	return (len);
 }
 
-int main()
+/*int main()
 {
 	int print;
 	int printft;
@@ -80,4 +80,4 @@ int main()
 	print = printf("(-15x) : %x \n", -15);
 	printf("Resultado original cadena: %d || Resultado ft cadena: %d \n", print, printft);
 	return 0;
-}
+}*/
