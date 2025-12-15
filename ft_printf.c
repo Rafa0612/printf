@@ -6,7 +6,7 @@
 /*   By: rpena-ro <rpena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/04 12:19:08 by rpena-ro          #+#    #+#             */
-/*   Updated: 2025/12/12 15:14:50 by rpena-ro         ###   ########.fr       */
+/*   Updated: 2025/12/15 14:32:24 by rpena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,21 +37,26 @@ int	ft_printf(char const *s, ...)
 	return (len);
 }
 
-/*int main()
+int main()
 {
 	int print;
 	int printft;
 	int nmbr = -325;
 	int nmbr2 = 42;
 	char *s = "Mundo";
-	void *st;
+	void *st, *st2 = NULL;
 
 	printf ("------------------Prueba Cadenas---------------------------\n");
 	print = printf("[Hola %s] \n", s);
 	printft = ft_printf("[Hola %s] \n", s);
 	printf("Resultado original cadena: %d || Resultado ft cadena: %d \n", print, printft);
 	printf ("------------------Prueba Punteros---------------------------\n");
-	printf("%p \n", st);
+	print = printf("%p \n", st);
+	printft = ft_printf("%p \n", st);
+	printf("Resultado original cadena: %d || Resultado ft cadena: %d \n", print, printft);
+	print = printf("%p \n", st2);
+	printft = ft_printf("%p \n", st2);
+	printf("Resultado original cadena: %d || Resultado ft cadena: %d \n", print, printft);
 	printf ("------------------Prueba Enteros---------------------------\n");
 	printft = ft_printf("El numero a mostrar es: %i \n", nmbr);
 	print = printf("El numero a mostrar es: %i \n", nmbr);
@@ -75,4 +80,4 @@ int	ft_printf(char const *s, ...)
 	print = printf("(-15x) : %x \n", -15);
 	printf("Resultado original cadena: %d || Resultado ft cadena: %d \n", print, printft);
 	return 0;
-}*/
+}

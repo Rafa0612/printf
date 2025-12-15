@@ -6,7 +6,7 @@
 /*   By: rpena-ro <rpena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 12:23:17 by rpena-ro          #+#    #+#             */
-/*   Updated: 2025/12/12 13:31:04 by rpena-ro         ###   ########.fr       */
+/*   Updated: 2025/12/15 14:32:46 by rpena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_formats(va_list args, const char format)
 	if (format == 's')
 		len = len + ft_print_str(va_arg(args, char *));
 	if (format == 'd' || format == 'i')
-		len = len + ft_print_nbr((va_arg(args,int)));
+		len = len + ft_print_nbr((va_arg(args, int)));
 	if (format == 'u')
 		len = len + ft_print_unbr(va_arg(args, int));
 	if (format == '%')
