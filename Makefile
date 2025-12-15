@@ -6,7 +6,7 @@
 #    By: rpena-ro <rpena-ro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/15 14:05:42 by rpena-ro          #+#    #+#              #
-#    Updated: 2025/12/15 14:35:22 by rpena-ro         ###   ########.fr        #
+#    Updated: 2025/12/15 15:48:29 by rpena-ro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ OBJS = $(SRCS:.c=.o)
 
 NAME = libftprintf.a
 
-LIBFT_DIR = ./Libft_Casa
+LIBFT_DIR = ./libft
 LIBFT = $(LIBFT_DIR)/libft.a 
 
 all: $(NAME)
